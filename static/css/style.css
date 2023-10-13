@@ -1,0 +1,93 @@
+/* COLOR PALETTE:
+#120113 - very dark purple
+#750D37 - wine
+#4BAA6A - green
+#F7F9F7 - eggshell white
+*/
+
+body {
+    background-color: #F7F9F7;
+}
+
+h1 {
+    color: #750D37;
+    font-size: 36px;
+    font-family: Trebuchet MS;
+}
+
+#sender-feedback {
+    overflow-y: auto;
+    height: 190px;
+    width: 400px;
+    scroll-behavior: smooth;
+    text-align: left;
+}
+
+#inputText {
+    background-color: #F7F9F7;
+    border: 3px double #4BAA6A;
+    height: 84px;
+    width: 340px;
+    color: #750D37;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: move;
+    resize: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#inputText::placeholder {
+    text-align: center;
+}
+
+#messages {
+    background-color: #4BAA6A;
+    color: white;
+    text-align: left;
+    font-size: medium;
+    font-weight: 700;
+    text-shadow:
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    padding-inline: 2%;
+    padding-block: 2%;
+    overflow-y: auto;
+    position: absolute;
+    height: 180px;
+    width: 340px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    resize: both;
+}
+
+footer {
+    font-size: small;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    color: #120113;
+    text-align: center;
+    text-align: right;
+}
+
+/* Bootstrap changes */
+.offcanvas-size-sm {
+    --bs-offcanvas-width: 15% !important;
+}
+/* For small screens */
+@media (max-width:690px) {
+    .offcanvas-size-sm {
+        --bs-offcanvas-width: 30% !important;
+    }
+}
+.active {
+    font-size: x-large;
+}

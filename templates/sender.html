@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/draggable.js') }}"></script>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+
+        let socket = io();
+        
+        function checkEnter(key) {
+            if(key.keyCode == 13) {
+                socket.emit('message', document.getElementById("inputText").value);
+
+                let message = document.getElementById("inputText");
+                let feedback = document.getElementById("sender-feedback");
+                feedback.innerHTML += message.value + "<br>";
+                feedback.scrollTo({ top: feedback.scrollHeight, behavior: "smooth" });
+                message.value = "";
+                key.preventDefault();
+            }
+        }
+
+    </script>
+
+    <title>Sender Page</title>
+{% endblock %}
+
+{% block functional %}
+    <h1>Sender Page</h1>
+
+    <textarea name="textsender"
+    id="inputText"
+    placeholder="Type here"
+    spellcheck="false"
+    onkeypress="checkEnter(event)"
+    ></textarea>
+
+    <p id="sender-feedback"></p>
+{% endblock %}
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">How To</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link active" href="#">Sender</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/receiver">Receiver</a>
+    </li>
+{% endblock %}

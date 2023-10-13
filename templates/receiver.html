@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/draggable-copy.js') }}"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+
+        let socket = io();
+
+        socket.on('response', function(msg) {
+            let node = document.createElement("LI");
+            let textnode = document.createTextNode(msg.data);
+            node.appendChild(textnode);
+            messages = document.getElementById("messages")
+            messages.appendChild(node);
+            messages.scrollTo({ top: messages.scrollHeight, behavior: "smooth" })
+        })
+
+    </script>
+    <title>Receiver Page</title>
+    <style>
+        #messages {
+            list-style-type: none; /* Remove bullet points */
+        }
+        
+    </style>
+{% endblock %}
+
+{% block functional %}
+    <h1>Receiver Page</h1>
+    <div id="messages"></div>
+{% endblock %}
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">How To</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/sender">Sender</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link active" href="#">Receiver</a>
+    </li>
+{% endblock %}
