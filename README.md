@@ -29,5 +29,5 @@ To host in a website:
 
 ## ℹ️ Information
 
-This software uses the MIT LICENSE.
+This software uses the [MIT LICENSE](https://github.com/mavvos/Live-Subtitles/blob/main/LICENSE).
 
