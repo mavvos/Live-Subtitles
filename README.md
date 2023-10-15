@@ -3,10 +3,6 @@
   <p text-align="justify">Live-Subtitles is a template made to help generate subtitles in livestream services.</p>
 </div>
 
-## ▶️ Demonstration
-
-https://github.com/mavvos/Live-Translation/assets/142045914/7f04bd36-d533-44fe-904b-10d0a9faddf9
-
 ## 👨‍🏫 How to use
 The person responsible for the live transmission opens up the Receiver page, chromakeys the green-box and adjusts it to fit their needs, then waits on the professional operating the Sender page.
 
