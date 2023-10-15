@@ -1,6 +1,6 @@
 <div align="center">
   <h1>📹 Live-Translation 🔴</h1>
-  <p text-align="justify">Live-Translation is a webpage template made to help translation in live stream services.</p>
+  <p text-align="justify">Live-Translation is a template made to help translation in live stream services.</p>
 </div>
 
 ## ▶️ Demonstration
@@ -16,14 +16,16 @@ The person responsible for the live transmission opens up the Receiver page, chr
 The Translator opens the Sender page and types their translation in the text area; every time the enter key is pressed, the current message is sent to the Receiver page, as well as showing up on the immediate feedback just above the type area.
 
 ## ⚙ How it works
-Live-Translation was made using HTML, CSS, JavaScript,
-and Python modules Flask, Flask_SocketIO and Jinja.
+Live-Translation was made using HTML, CSS, JavaScript, and Python modules:
+- Flask;
+- Flask_SocketIO for WebSockets;
+- Jinja for web template.
 
 ## 🏃 How to run
 To host locally:
-- Make sure you have Python, Flask and Flask_SocketIO installed
+- Make sure you have [Flask](https://pypi.org/project/Flask/) and [Flask_SocketIO](https://pypi.org/project/Flask-SocketIO/) installed
 - Clone this repository
-- On the cloned directory run the command ```flask run```
+- On the cloned directory run the command ```flask run``` and open the address generated.
 
 To host in a website:
 - Check the official <a href="https://flask.palletsprojects.com/en/3.0.x/deploying/">Flask deploying instructions</a>.
